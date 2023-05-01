@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./build/tailwind.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-gray-800">
+    <div
+      class="bg-gray-600 flex flex-row justify-center items-center gap-2 p-2"
+    >
+      <p class="text-white font-bold">Inventory app using tailwind & js</p>
+      <span
+        class="text-white border border-white rounded-full h-5 w-5 bg-gray-500 flex items-center justify-center text-xs"
+        >7</span
+      >
+    </div>
+    <div class="container max-w-xl mx-auto">
+      <!-- add new category -->
+      <div class="mt-16">
+        <div>
+          <button id="toggle-add-new-categoryBtn" class="text-gray-400 font-bold text-xl mb-2 hover:text-gray-50 transition-all ease-in-out duration-700">Add New Category ?</button>
+          <form class="hidden bg-gray-600 border border-gray-600 rounded-lg py-3 px-2">
+            <div class="pb-10">
+              <label
+                class="text-gray-300 mb-2 text-lg font-bold block"
+                for="category-title"
+              >
+                Category Title
+              </label>
+              <input
+                id="category-title"
+                type="text"
+                class="bg-transparent rounded-md p-1.5 border border-gray-400 outline-none text-gray-200"
+                placeholder="title ..."
+              />
+            </div>
+
+            <div class="pb-8">
+              <label
+                for="category-description"
+                class="text-gray-300 text-lg font-bold mb-3"
+              >
+                Category Description
+              </label>
+              <textarea
+                id="category-description"
+                class="mt-2 w-full bg-transparent border border-gray-400 rounded-lg"
+              ></textarea>
+            </div>
+
+            <div class="flex flex-row justify-center items-center gap-x-3">
+              <button
+                class="delete-category text-gray-500 border border-gray-500 py-1.5 w-full rounded-md hover:text-red-500 hover:border-gray-100"
+              >
+                Delete Category
+              </button>
+              <button
+                class="add-category text-slate-600 font-bold bg-gray-300 border py-1.5 rounded-md border-gray-500 w-full hover:text-green-500"
+              >
+                Add New Category
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- add new product -->
+      <div class="mt-16 mb-24">
+        <div class="">
+          <h2 class="text-gray-400 font-bold text-xl mb-2">Add New Product</h2>
+          <div class="bg-gray-600 border border-gray-600 rounded-lg py-3 px-2">
+            <div class="pb-10">
+              <label
+                for="product-title"
+                class="text-gray-300 mb-2 text-lg font-bold block"
+              >
+                Product Title
+              </label>
+              <input
+                id="product-title"
+                type="text"
+                class="text-gray-100 bg-transparent rounded-md p-1.5 border border-gray-400 outline-none"
+                placeholder="product title"
+              />
+            </div>
+            <div class="pb-10">
+              <label
+                for="quantity"
+                class="text-gray-300 mb-2 text-lg font-bold block"
+                >Quantity</label
+              >
+
+              <input
+                type="number"
+                id="quantity"
+                class="bg-transparent outline-none text-gray-100 border border-gray-400 rounded-md"
+              />
+            </div>
+
+            <div class="pb-8">
+              <label class="text-gray-300 text-lg font-bold mb-2 block"
+                >Category</label
+              >
+              <select
+                name="select-category"
+                id="category"
+                class="bg-transparent rounded-md text-gray-200 border-gray-400"
+              >
+                <option value="1" class="bg-gray-700 text-gray-200">
+                  Select
+                </option>
+                <!-- <option value="0" class="bg-gray-700 text-gray-200">
+                  Javascript
+                </option>
+                <option value="1" class="bg-gray-700 text-gray-200">c++</option>
+                <option value="2" class="bg-gray-700 text-gray-200">
+                  python
+                </option> -->
+              </select>
+            </div>
+            <div>
+              <button
+                class="add-new-product text-slate-600 hover:text-gray-300 hover:bg-gray-600 hover:border-gray-100 border font-bold bg-gray-300 py-1.5 rounded-md border-gray-500 w-full"
+              >
+                Add New Product
+              </button>
+              <p class="text-red-300 text-lg  py-1 mt-2 w-full flex flex-row justify-center"></p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- product list -->
+      <div class="mb-24">
+        <h2 class="text-gray-100 font-bold text-xl mb-2">Product List</h2>
+        <div class="flex flex-row justify-between items-center mb-4">
+          <label class="text-gray-500 text-lg" for="search">search</label>
+          <input
+            id="search"
+            type="text"
+            class="outline-none border border-gray-400 text-gray-200 bg-transparent rounded-md p-1.5"
+          />
+        </div>
+        <div class="flex flex-row justify-between items-center mb-9">
+          <label class="text-gray-500 text-lg" for="sort">Sort</label>
+          <select
+            name="sorting"
+            id="sort"
+            class="bg-transparent rounded-md text-gray-200 border-gray-400"
+          >
+            <option value="new" class="bg-gray-800 text-gray-200">newst</option>
+            <option value="old" class="bg-gray-800 text-gray-200">
+              oldest
+            </option>
+          </select>
+        </div>
+        <div class="productList">
+          <!-- <div class="flex flex-row justify-between items-center">
+            <h4 class="text-gray-400 bg-orange-300">Javascript</h4>
+
+            <p class="text-gray-200">12/02/2021</p>
+            <p
+              class="text-gray-400 border border-gray-400 rounded-full w-32  overflow-x-clip scrollbar-thin px-4 py-1"
+            >
+              frontexxxxxxxyyyyy vvv dds
+            </p>
+            <p
+              class="text-gray-200 bg-gray-500 border border-gray-200 h-6 w-6 flex flex-row justify-center items-center rounded-full"
+            >
+              6
+            </p>
+            <button
+              class="text-red-600 outline-none border border-red-600 bg-transparent rounded-full px-4 py hover:bg-red-600 hover:text-gray-200"
+            >
+              delete
+            </button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <script src="../src/js/app.js" type="module"></script>
+  </body>
+</html>
