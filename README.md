@@ -4,7 +4,14 @@ This Project is written by Mahsa Tabesh
 
 ### Add New Category Section
 
-* you can buy each product by clicking on "Add To Cart" button.  
-* click on basket shopping and see your information of shopping and update the shopping cart .
-* when you refresh the page the information of shopping are not removed and are saved in local storage.
+* If you want to add new category, you can write title and description then click on "Add New Category" button.  
+* If you want to delete category, you must write title then click on "delete Category" button.  
+<img src="pic1.JPG" width="700"/>
+
+
+### Add New Product Section
+
+* If you want to add new prodcut, you can write title of product and write a quntity for it then select the category of your product. In the end click on "Add New Product" button.
+<img src="pic2.JPG" width="700"/>  
+
  
