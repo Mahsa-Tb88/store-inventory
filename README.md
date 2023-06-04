@@ -2,7 +2,7 @@
 
 This Project is written by Mahsa Tabesh
 
-# Add New Category Section
+### Add New Category Section
 
 * you can buy each product by clicking on "Add To Cart" button.  
 * click on basket shopping and see your information of shopping and update the shopping cart .
